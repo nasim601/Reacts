@@ -1,0 +1,25 @@
+import React,{useRef,useState} from 'react'
+
+export default function App() {
+  return (
+    <div>
+      <h1>Hoc</h1>
+      <HOCRed cmp={Counter}/>
+      <HOCBlue cmp={Counter}/>
+    </div>
+  )
+}
+function HOCRed(props){
+  return <h1 style={{background:'red'}}><props.cmp/></h1>
+}
+function HOCBlue(props){
+  return <h1 style={{background:'blue'}}><props.cmp/></h1>
+}
+function Counter()
+{
+  const [count,setCount]=useState(0)
+  return <div>
+    <h3>{count}</h3>
+    <button onClick={() =>setCount(count+1)}>update</button>
+  </div>
+}

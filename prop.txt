@@ -1,0 +1,14 @@
+import React from 'react'
+
+export default function Home(prop) {
+  return (
+    <div>
+      <h1>{prop.text}</h1>
+    </div>
+  )
+}
+
+
+App.js
+   
+     <Home text="hi ,i am man"/>

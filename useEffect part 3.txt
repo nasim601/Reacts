@@ -1,0 +1,30 @@
+import './App.css';
+import React,{useEffect, useState} from 'react'
+import User from './User';
+function App() {
+  const [data,setData]=useState(10);
+  const [count,setCount]=useState(100);
+return (
+    <div className="App">
+     <User count={count} data={data}/>
+      <button onClick={()=>setCount(count+1)}>UpdateData</button>
+      <button onClick={()=>setData(data+1)}>setData</button>
+    </div>
+  );
+}
+
+export default App;
+...................................................................................................................
+import React,{useState,useEffect} from 'react'
+
+export default function User(props) {
+    useEffect(()=>{
+        alert("count is"+props.count)
+    },[props.count])
+  return (
+    <div>
+      <h1>count props:{props.count}</h1>
+      <h1>data props:{props.data}</h1>
+    </div>
+  )
+}

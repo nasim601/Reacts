@@ -1,0 +1,24 @@
+import React from 'react'
+class Home extends React.Component{
+    constructor(){
+        super();
+        this.state={
+          First:'nasim',
+            Last:'Akhtar'
+        }
+    }
+    updateState(){
+        this.setState({First:'sanju'})
+    }
+    render(){
+        return(
+            <div>
+                <h1>hi,{this.state.First}</h1>
+                <h1>oo,{this.state.Last}</h1>
+                <button onClick={()=>{this.updateState()}}>Click Here</button>
+
+            </div>
+        )
+    }
+}
+export default Home

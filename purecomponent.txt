@@ -1,0 +1,19 @@
+import React,{PureComponent} from "react";
+class App extends PureComponent{
+  constructor(){
+    super();
+    this.state={
+      count:1
+    }
+  }
+  render(){
+    console.warn("check rerending")
+    return(
+      <div>
+        <h1>pure component in react{this.state.count}</h1>
+        <button onClick={()=> this.setState({count:this.state.count+1})}>update count</button>
+      </div>
+    )
+  }
+}
+export default App

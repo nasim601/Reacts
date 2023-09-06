@@ -1,0 +1,14 @@
+import React from 'react'
+class Home extends React.Component{
+    calls(){
+        alert("react")
+    }
+    render(){
+        return(
+            <div>
+                <button onClick={()=>{this.calls()}}>click here</button>
+            </div>
+        )
+    }
+}
+export default Home

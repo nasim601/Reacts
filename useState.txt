@@ -1,0 +1,13 @@
+import './App.css';
+import React,{useState} from 'react'
+function App() {
+  const [data,setData]=useState("nasim")
+  return (
+    <div className="App">
+      <h1>{data}</h1>
+      <button onClick={()=>setData("sanju")}>UpdateData</button>
+    </div>
+  );
+}
+
+export default App;

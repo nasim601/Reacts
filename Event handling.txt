@@ -1,0 +1,26 @@
+import React from 'react'
+
+const Home = () => {
+    alert("hi,i am man")
+  return (
+    <div>
+        <button onClick={() =>{Home()}}>click here</button>
+      
+    </div>
+  )
+}
+
+export default Home
+..........................................................................
+import React from 'react'
+
+export default function Home() {
+    function testfun(){
+        alert("hi, react")
+    }
+  return (
+    <div>
+      <button onClick={()=>{testfun()}}>click me</button>
+    </div>
+  )
+}
